@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- icon -->
+   <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='user/images/loader.png')}}">
+
+   <!-- Swiper CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+   <!-- ico fonts -->
+   <link rel="stylesheet" href="{{url_for('static', filename='user/styles/xsIcon.css')}}">
+
+   <!-- Styles -->
+   <link rel="stylesheet" href="{{url_for('static', filename='user/styles/style.css')}}" />
+
+   <!-- magnific -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+   <link rel="stylesheet" href="{{url_for('static', filename='user/styles/magnific-popup.css')}}">
+
+   <!-- FontAwesome -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+   <!--Event Slider-->
+   <script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+
+
+   <!-- for loader -->
+   <link rel="stylesheet" href="{{url_for('static', filename='user/styles/preloader.css')}}">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+   <title>Event</title>
+
+</head>
+
+<body>
+   <!-- Background animation start    -->
+   <canvas></canvas>
+   <!-- Background animation end  -->
+
+   <!-- Page loader start-->
+   <div id="loading">
+      <div class="loader-container">
+         <!-- Outer rings -->
+         <div class="outer-ring1"></div>
+         <div class="outer-ring2"></div>
+         <div class="outer-ring3"></div>
+         <div class="loader">
+            <img class="image" src="{{url_for('static', filename='user/images/loader.png')}}" alt="PSF'24 LOGO">
+         </div>
+      </div>
+   </div>
+   <!-- Page loader end -->
+
+   <div class="scroll-up-btn">
+      <i class="fas fa-angle-up"></i>
+   </div>
+
+   <!-- Navbar start -->
+   <nav class="navbar" id="navbar">
+      <div class="max-width">
+         <div class="logo"><a href="#">
+               <img src="https://via.assets.so/img.jpg?w=1244&h=276&tc=#9C9CA0&bg=#DBDBDF" alt="logo"
+                  style=" width: 200px;">
+            </a></div>
+         <ul class="menu">
+            <li><a href="#home" class="menu-btn">HOME</a></li>
+            <li><a href="#about" class="menu-btn">OVERVIEW</a></li>
+            <li><a href="#events" class="menu-btn">EVENTS</a></li>
+            <li><a href="#agenda" class="menu-btn">AGENDA</a></li>
+            <li><a href="#speakers" class="menu-btn">SPEAKERS</a></li>
+            <li><a href="#visitors" class="menu-btn">REGISTRATION</a></li>
+            <li><a href="#faqs" class="menu-btn">FAQs</a></li>
+            <li><a href="#subscribe" class="menu-btn">CONTACT US</a></li>
+            <li><a href="/admin" class="menu-btn">ADMIN</a></li>
+         </ul>
+         <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+         </div>
+      </div>
+   </nav>
+   <!-- Navbar end -->
+
+   <!-- Home start -->
+   <section id="home" class="hero">
+      <video autoplay muted loop id="videoElement">
+         <source id="sourceElement" src="{{url_for('static', filename='user/videos/laptop.mp4')}}" type="video/mp4">
+         Your browser does not support the video tag.
+      </video>
+
+      <!-- Add a separate video element for mobile screens -->
+      <video autoplay muted loop id="mobileVideoElement">
+         <source id="sourceElement" src="{{url_for('static', filename='user/videos/phone.mp4')}}" type="video/mp4">
+         Your browser does not support the video tag.
+      </video>
+
+
+
+   </section>
+   <!-- Home end -->
+
+   <!-- About start -->
+   <section id="about" class="section-padding">
+      <h1>Event Overview</h1>
+
+      <div class="swiper" style="pointer-events: none;">
+         <div class="swiper-wrapper">
+            <div class="swiper-slide">
+               <div class="content elevate">
+
+                  <p>
+                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam eaque nihil aliquid tempore,
+                     delectus vero repellendus, dolorem natus iure sit quis asperiores? Repellendus alias a placeat
+                     autem. Aspernatur alias ipsam animi nihil itaque nam cumque inventore atque eius, error voluptatum
+                     quo unde, maxime modi tempore rerum dolore aperiam corporis, iusto ad! Eos totam doloribus dolorem
+                     praesentium quibusdam nostrum ab delectus laborum. Iure praesentium corrupti tenetur numquam quae
+                     earum perspiciatis harum mollitia possimus explicabo nobis, illo enim culpa ducimus voluptates
+                     expedita nam fugit suscipit eligendi! Eos nemo incidunt dolore explicabo aperiam minima iure libero
+                     quo, sunt hic! Nam eum sequi praesentium molestias repudiandae totam debitis porro aliquam
+                     dignissimos, cum magni repellendus qui corrupti blanditiis
+                  </p>
+               </div>
+
+               <div class="image-container elevate">
+                  <img class="item" src="{{url_for('static', filename='user/images/event_overview/split1.jpg')}}"
+                     style="--i: 2" alt="" />
+
+                  <img class="item" src="{{url_for('static', filename='user/images/event_overview/split2.jpg')}}"
+                     style="--i: 6" alt="" />
+
+                  <img class="item" src="{{url_for('static', filename='user/images/event_overview/split3.jpg')}}"
+                     style="--i: 8" alt="" />
+
+                  <img class="item" src="{{url_for('static', filename='user/images/event_overview/split4.jpg')}}"
+                     style="--i: 4" alt="" />
+
+                  <img class="item" src="{{url_for('static', filename='user/images/event_overview/split5.jpg')}}"
+                     style="--i: 1" alt="" />
+
+                  <img class="item" src="{{url_for('static', filename='user/images/event_overview/split6.jpg')}}"
+                     style="--i: 9" alt="" />
+
+                  <img class="item" src="{{url_for('static', filename='user/images/event_overview/split7.jpg')}}"
+                     style="--i: 7" alt="" />
+
+                  <img class="item" src="{{url_for('static', filename='user/images/event_overview/split8.jpg')}}"
+                     style="--i: 5" alt="" />
+
+                  <img class="item" src="{{url_for('static', filename='user/images/event_overview/split9.jpg')}}"
+                     style="--i: 3" alt="" />
+               </div>
+            </div>
+
+         </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+   </section>
+   <!-- About end -->
+
+   <!-- Events start -->
+   <section id="events">
+      <h1>Events</h1>
+      <div class="rt-container">
+         <div class="col-rt-12">
+            <div class="Scriptcontent">
+
+               <!-- partial:index.partial.html -->
+               <div class="container">
+                  <div class="wgh-slider">
+                     <input class="wgh-slider-target" type="radio" id="slide-1" name="slider" />
+                     <input class="wgh-slider-target" type="radio" id="slide-2" name="slider" />
+                     <input class="wgh-slider-target" type="radio" id="slide-3" name="slider" />
+                     <input class="wgh-slider-target" type="radio" id="slide-4" name="slider" />
+                     <input class="wgh-slider-target" type="radio" id="slide-5" name="slider" checked="checked" />
+                     <input class="wgh-slider-target" type="radio" id="slide-6" name="slider" />
+                     <input class="wgh-slider-target" type="radio" id="slide-7" name="slider" />
+                     <input class="wgh-slider-target" type="radio" id="slide-8" name="slider" />
+                     <input class="wgh-slider-target" type="radio" id="slide-9" name="slider" />
+                     <input class="wgh-slider-target" type="radio" id="slide-10" name="slider" />
+                     <div class="wgh-slider__viewport">
+                        <div class="wgh-slider__viewbox">
+                           <div class="wgh-slider__container">
+                              <div class="wgh-slider-item">
+                                 <div class="wgh-slider-item__inner">
+                                    <figure class="wgh-slider-item-figure"><img class="wgh-slider-item-figure__image"
+                                          src="{{url_for('static', filename='user/images/all_events/round_table.jpeg')}}"
+                                          alt="The 5th Exotic" />
+                                       <figcaption class="wgh-slider-item-figure__caption"><a
+                                             href="{{url_for('user.round_table')}}">Round
+                                             Table</a></figcaption>
+                                    </figure>
+                                    <label class="wgh-slider-item__trigger" for="slide-1"
+                                       title="Show product 1"></label>
+                                 </div>
+                              </div>
+                              <div class="wgh-slider-item">
+                                 <div class="wgh-slider-item__inner">
+                                    <figure class="wgh-slider-item-figure"><img class="wgh-slider-item-figure__image"
+                                          src="{{url_for('static', filename='user/images/all_events/tech_talk.jpeg')}}"
+                                          alt="The 5th Exotic" />
+                                       <figcaption class="wgh-slider-item-figure__caption"><a
+                                             href="{{url_for('user.tech_talks')}}">Tech
+                                             Talks</a></figcaption>
+                                    </figure>
+                                    <label class="wgh-slider-item__trigger" for="slide-2"
+                                       title="Show product 2"></label>
+                                 </div>
+                              </div>
+                              <div class="wgh-slider-item">
+                                 <div class="wgh-slider-item__inner">
+                                    <figure class="wgh-slider-item-figure"><img class="wgh-slider-item-figure__image"
+                                          src="{{url_for('static', filename='user/images/all_events/mou.jpeg')}}"
+                                          alt="The 5th Exotic" />
+                                       <figcaption class="wgh-slider-item-figure__caption"><a
+                                             href="{{url_for('user.mou_singing')}}">MoU
+                                             Signing</a></figcaption>
+                                    </figure>
+                                    <label class="wgh-slider-item__trigger" for="slide-3"
+                                       title="Show product 3"></label>
+                                 </div>
+                              </div>
+                              <div class="wgh-slider-item">
+                                 <div class="wgh-slider-item__inner">
+                                    <figure class="wgh-slider-item-figure"><img class="wgh-slider-item-figure__image"
+                                          src="{{url_for('static', filename='user/images/all_events/bootcamp.jpeg')}}"
+                                          alt="The 5th Exotic" />
+                                       <figcaption class="wgh-slider-item-figure__caption"><a
+                                             href="{{url_for('user.bootcamps')}}">Boot
+                                             Camps</a></figcaption>
+                                    </figure>
+                                    <label class="wgh-slider-item__trigger" for="slide-4"
+                                       title="Show product 4"></label>
+                                 </div>
+                              </div>
+                              <div class="wgh-slider-item">
+                                 <div class="wgh-slider-item__inner">
+                                    <figure class="wgh-slider-item-figure"><img class="wgh-slider-item-figure__image"
+                                          src="{{url_for('static', filename='user/images/all_events/startup_show.jpeg')}}"
+                                          alt="RYSY - Traveler LP" />
+                                       <figcaption class="wgh-slider-item-figure__caption"><a
+                                             href="{{url_for('user.startup_showcase')}}">Startup Show-Case</a>
+                                       </figcaption>
+                                    </figure>
+                                    <label class="wgh-slider-item__trigger" for="slide-5"
+                                       title="Show product 5"></label>
+                                 </div>
+                              </div>
+                              <div class="wgh-slider-item">
+                                 <div class="wgh-slider-item__inner">
+                                    <figure class="wgh-slider-item-figure"><img class="wgh-slider-item-figure__image"
+                                          src="{{url_for('static', filename='user/images/all_events/tech_exhibit.jpeg')}}"
+                                          alt="RYSY - Traveler LP" />
+                                       <figcaption class="wgh-slider-item-figure__caption"><a
+                                             href="{{url_for('user.tech_exhibits')}}">Tech
+                                             Exhibits</a></figcaption>
+                                    </figure>
+                                    <label class="wgh-slider-item__trigger" for="slide-6"
+                                       title="Show product 6"></label>
+                                 </div>
+                              </div>
+                              <div class="wgh-slider-item">
+                                 <div class="wgh-slider-item__inner">
+                                    <figure class="wgh-slider-item-figure"><img class="wgh-slider-item-figure__image"
+                                          src="{{url_for('static', filename='user/images/all_events/master_class.jpeg')}}"
+                                          alt="RYSY - Traveler LP" />
+                                       <figcaption class="wgh-slider-item-figure__caption"><a
+                                             href="{{url_for('user.master_class')}}">Master
+                                             Class</a></figcaption>
+                                    </figure>
+                                    <label class="wgh-slider-item__trigger" for="slide-7"
+                                       title="Show product 7"></label>
+                                 </div>
+                              </div>
+                              <div class="wgh-slider-item">
+                                 <div class="wgh-slider-item__inner">
+                                    <figure class="wgh-slider-item-figure"><img class="wgh-slider-item-figure__image"
+                                          src="{{url_for('static', filename='user/images/all_events/ideathon.jpeg')}}"
+                                          alt="RYSY - Traveler LP" />
+                                       <figcaption class="wgh-slider-item-figure__caption"><a
+                                             href="{{url_for('user.ideathons')}}">Ideathons</a></figcaption>
+                                    </figure>
+                                    <label class="wgh-slider-item__trigger" for="slide-8"
+                                       title="Show product 8"></label>
+                                 </div>
+                              </div>
+                              <div class="wgh-slider-item">
+                                 <div class="wgh-slider-item__inner">
+                                    <figure class="wgh-slider-item-figure"><img class="wgh-slider-item-figure__image"
+                                          src="{{url_for('static', filename='user/images/all_events/investor_connect.jpeg')}}"
+                                          alt="RYSY - Traveler LP" />
+                                       <figcaption class="wgh-slider-item-figure__caption"><a
+                                             href="{{url_for('user.investor_connect')}}">Investor Connect</a>
+                                       </figcaption>
+                                    </figure>
+                                    <label class="wgh-slider-item__trigger" for="slide-9"
+                                       title="Show product 9"></label>
+                                 </div>
+                              </div>
+                              <div class="wgh-slider-item">
+                                 <div class="wgh-slider-item__inner">
+                                    <figure class="wgh-slider-item-figure"><img class="wgh-slider-item-figure__image"
+                                          src="{{url_for('static', filename='user/images/all_events/intern_connect.jpeg')}}"
+                                          alt="RYSY - Traveler LP" />
+                                       <figcaption class="wgh-slider-item-figure__caption"><a
+                                             href="{{url_for('user.intern_connect')}}">Intern
+                                             Connect</a></figcaption>
+                                    </figure>
+                                    <label class="wgh-slider-item__trigger" for="slide-10"
+                                       title="Show product 10"></label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- partial -->
+
+            </div>
+         </div>
+      </div>
+
+   </section>
+   <!-- Events end -->
+
+   <!-- Schedule start -->
+   <section id="agenda" class="schedule">
+      <h1 class="schedule-head">Event Schedule</h1>
+      <div class="schedule-tab elevate">
+         <ul class="nav_ul">
+            <li class="nav-item">
+               <a id="schedule-1" class="active">
+                  Day-01
+                  <span>14 March 2024</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a id="schedule-2" class="">
+                  Day-02
+                  <span>15 March 2024</span>
+               </a>
+            </li>
+         </ul>
+      </div>
+      <div class="schedule-contents">
+         <div class="schedule-item" id="day1">
+            <!-- Headings -->
+            <ul>
+               <li class="headings">
+                  <div class="time">Time</div>
+                  <div class="speaker">Speaker</div>
+                  <div class="subject">Subject</div>
+                  <div class="venue">Venue</div>
+               </li>
+               <!-- Schedule Details -->
+               <li class="schedule-details">
+                  <div class="block">
+                     <!-- time -->
+                     <div class="time">
+                        <i class="fa fa-clock-o"></i>
+                        <span class="time">9.00 AM</span>
+                     </div>
+                     <!-- Speaker -->
+                     <div class="speaker">
+                        <img style="height:65px; width:65px;" src="https://placehold.co/800" alt="speaker-thumb-one">
+                        <span class="name">Person Name</span>
+                     </div>
+                     <!-- Subject -->
+                     <div class="subject">Start Show-Case</div>
+                     <!-- Venue -->
+                     <div class="venue">Auditorium A</div>
+                  </div>
+               </li>
+               <!-- Schedule Details -->
+               <li class="schedule-details">
+                  <div class="block">
+                     <!-- time -->
+                     <div class="time">
+                        <i class="fa fa-clock-o"></i>
+                        <span class="time">10.00 AM</span>
+                     </div>
+                     <!-- Speaker -->
+                     <div class="speaker">
+                        <img style="height:65px; width:65px;" src="https://placehold.co/800" alt="speaker-thumb-two">
+                        <span class="name">Person Name</span>
+                     </div>
+                     <!-- Subject -->
+                     <div class="subject">Round Table</div>
+                     <!-- Venue -->
+                     <div class="venue">Auditorium B</div>
+                  </div>
+               </li>
+               <!-- Schedule Details -->
+               <li class="schedule-details">
+                  <div class="block">
+                     <!-- time -->
+                     <div class="time">
+                        <i class="fa fa-clock-o"></i>
+                        <span class="time">12.00 AM</span>
+                     </div>
+                     <!-- Speaker -->
+                     <div class="speaker">
+                        <img style="height:65px; width:65px;" src="https://placehold.co/800" alt="speaker-thumb-three">
+                        <span class="name">Person Name</span>
+                     </div>
+                     <!-- Subject -->
+                     <div class="subject">Tech Talks</div>
+                     <!-- Venue -->
+                     <div class="venue">Auditorium C</div>
+                  </div>
+               </li>
+               <!-- Schedule Details -->
+               <li class="schedule-details">
+                  <div class="block">
+                     <!-- time -->
+                     <div class="time">
+                        <i class="fa fa-clock-o"></i>
+                        <span class="time">2.00 PM</span>
+                     </div>
+                     <!-- Speaker -->
+                     <div class="speaker">
+                        <img style="height:65px; width:65px;" src="https://placehold.co/800" alt="speaker-thumb-four">
+                        <span class="name">Person Name</span>
+                     </div>
+                     <!-- Subject -->
+                     <div class="subject">MoU Signing</div>
+                     <!-- Venue -->
+                     <div class="venue">Auditorium D</div>
+                  </div>
+               </li>
+               <!-- Schedule Details -->
+               <li class="schedule-details">
+                  <div class="block">
+                     <!-- time -->
+                     <div class="time">
+                        <i class="fa fa-clock-o"></i>
+                        <span class="time">3.00 PM</span>
+                     </div>
+                     <!-- Speaker -->
+                     <div class="speaker">
+                        <img style="height:65px; width:65px;" src="https://placehold.co/800" alt="speaker-thumb-five">
+                        <span class="name">Person Name</span>
+                     </div>
+                     <!-- Subject -->
+                     <div class="subject">Boot Camps</div>
+                     <!-- Venue -->
+                     <div class="venue">Auditorium E</div>
+                  </div>
+               </li>
+            </ul>
+         </div>
+
+         <br>
+
+         <div style="display:none;" class="schedule-item" id="day2">
+            <!-- Headings -->
+            <ul>
+               <li class="headings">
+                  <div class="time">Time</div>
+                  <div class="speaker">Speaker</div>
+                  <div class="subject">Event</div>
+                  <div class="venue">Venue</div>
+               </li>
+               <!-- Schedule Details -->
+               <li class="schedule-details">
+                  <div class="block">
+                     <!-- time -->
+                     <div class="time">
+                        <i class="fa fa-clock-o"></i>
+                        <span class="time">9.00 AM</span>
+                     </div>
+                     <!-- Speaker -->
+                     <div class="speaker">
+                        <img style="height:65px; width:65px;" src="https://placehold.co/800" alt="speaker-thumb-one">
+                        <span class="name">Person Name</span>
+                     </div>
+                     <!-- Subject -->
+                     <div class="subject">Tech Exhibits</div>
+                     <!-- Venue -->
+                     <div class="venue">Auditorium A</div>
+                  </div>
+               </li>
+               <!-- Schedule Details -->
+               <li class="schedule-details">
+                  <div class="block">
+                     <!-- time -->
+                     <div class="time">
+                        <i class="fa fa-clock-o"></i>
+                        <span class="time">10.00 AM</span>
+                     </div>
+                     <!-- Speaker -->
+                     <div class="speaker">
+                        <img style="height:65px; width:65px;" src="https://placehold.co/800" alt="speaker-thumb-two">
+                        <span class="name">Person Name</span>
+                     </div>
+                     <!-- Subject -->
+                     <div class="subject">Master Class</div>
+                     <!-- Venue -->
+                     <div class="venue">Auditorium B</div>
+                  </div>
+               </li>
+               <!-- Schedule Details -->
+               <li class="schedule-details">
+                  <div class="block">
+                     <!-- time -->
+                     <div class="time">
+                        <i class="fa fa-clock-o"></i>
+                        <span class="time">12.00 AM</span>
+                     </div>
+                     <!-- Speaker -->
+                     <div class="speaker">
+                        <img style="height:65px; width:65px;" src="https://placehold.co/800" alt="speaker-thumb-three">
+                        <span class="name">Person Name</span>
+                     </div>
+                     <!-- Subject -->
+                     <div class="subject">Ideathons</div>
+                     <!-- Venue -->
+                     <div class="venue">Auditorium C</div>
+                  </div>
+               </li>
+               <!-- Schedule Details -->
+               <li class="schedule-details">
+                  <div class="block">
+                     <!-- time -->
+                     <div class="time">
+                        <i class="fa fa-clock-o"></i>
+                        <span class="time">2.00 PM</span>
+                     </div>
+                     <!-- Speaker -->
+                     <div class="speaker">
+                        <img style="height:65px; width:65px;" src="https://placehold.co/800" alt="speaker-thumb-four">
+                        <span class="name">Person Name</span>
+                     </div>
+                     <!-- Subject -->
+                     <div class="subject">Investor Connect</div>
+                     <!-- Venue -->
+                     <div class="venue">Auditorium D</div>
+                  </div>
+               </li>
+               <!-- Schedule Details -->
+               <li class="schedule-details">
+                  <div class="block">
+                     <!-- time -->
+                     <div class="time">
+                        <i class="fa fa-clock-o"></i>
+                        <span class="time">3.00 PM</span>
+                     </div>
+                     <!-- Speaker -->
+                     <div class="speaker">
+                        <img style="height:65px; width:65px;" src="https://placehold.co/800" alt="speaker-thumb-five">
+                        <span class="name">Person Name</span>
+                     </div>
+                     <!-- Subject -->
+                     <div class="subject">Intern Connect</div>
+                     <!-- Venue -->
+                     <div class="venue">Auditorium E</div>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      </div>
+      <script src="{{url_for('static', filename='user/scripts/jquery.js')}}"></script>
+      <script src="{{url_for('static', filename='user/scripts/popper.min.js')}}"></script>
+   </section>
+   <!-- Schedule end  -->
+
+   <!--Speakers starts-->
+   <section id="speakers">
+      <h2 class="head">
+         Event Speakers
+      </h2>
+      <div class="container-speaker">
+
+         <a href="#person1">
+            <div class="speaker-card fade-in">
+               <img src="https://placehold.co/800" alt="Speaker 1" />
+               <h3>Person 1</h3>
+               <p>Role</p>
+            </div>
+         </a>
+
+         <a href="#person2">
+            <div class="speaker-card fade-in">
+               <img src="https://placehold.co/800" alt="Speaker 2" />
+               <h3>Person 2</h3>
+               <p>Role</p>
+            </div>
+         </a>
+
+         <a href="#person3">
+            <div class="speaker-card fade-in">
+               <img src="https://placehold.co/800" alt="Speaker 3" />
+               <h3>Person 3</h3>
+               <p>Role</p>
+            </div>
+         </a>
+
+         <a href="#person4">
+            <div class="speaker-card fade-in">
+               <img src="https://placehold.co/800" alt="Speaker 4" />
+               <h3>Person 4</h3>
+               <p>Role</p>
+            </div>
+         </a>
+
+         <a href="#person5">
+            <div class="speaker-card fade-in">
+               <img src="https://placehold.co/800" alt="Speaker 5" />
+               <h3>Person 5</h3>
+               <p>Role</p>
+            </div>
+         </a>
+      </div>
+
+
+
+      <!-- Modals of speakers start -->
+      <div class="popup" id="person1">
+         <div class="popup-inner">
+            <div class="popup__photo">
+               <img src="https://placehold.co/800" alt="">
+            </div>
+            <div class="popup__text">
+               <h1>Person 1</h1>
+               <p><b>Role</b></p>
+               <br>
+               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius possimus sit ratione, consequuntur unde
+                  iusto nemo, quia ipsum officia eaque nesciunt commodi voluptatem? Officia ad dignissimos laborum
+                  blanditiis dicta doloremque tenetur corrupti, atque ipsam illo sit quibusdam, magnam quaerat, hic
+                  deserunt laudantium officiis sapiente asperiores reprehenderit sed commodi natus. Nobis illo voluptas
+                  at placeat esse. Optio doloremque dicta cupiditate repellendus enim dolorum sapiente. Iure molestias,
+                  laudantium vitae nesciunt sint voluptate, deleniti deserunt ducimus quasi, error atque enim nulla
+                  veritatis eligendi.</p>
+               <div class="popup-social">
+                  <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                  <a href="https://in.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+               </div>
+
+            </div>
+            <a class="popup__close" href="##">X</a>
+         </div>
+      </div>
+
+      <div class="popup" id="person2">
+         <div class="popup-inner">
+            <div class="popup__photo">
+               <img src="https://placehold.co/800" alt="">
+            </div>
+            <div class="popup__text">
+               <h1>Person 2</h1>
+               <p><b>Role</b></p>
+               <br>
+               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius possimus sit ratione, consequuntur unde
+                  iusto nemo, quia ipsum officia eaque nesciunt commodi voluptatem? Officia ad dignissimos laborum
+                  blanditiis dicta doloremque tenetur corrupti, atque ipsam illo sit quibusdam, magnam quaerat, hic
+                  deserunt laudantium officiis sapiente asperiores reprehenderit sed commodi natus. Nobis illo voluptas
+                  at placeat esse. Optio doloremque dicta cupiditate repellendus enim dolorum sapiente. Iure molestias,
+                  laudantium vitae nesciunt sint voluptate, deleniti deserunt ducimus quasi, error atque enim nulla
+                  veritatis eligendi.</p>
+               <div class="popup-social">
+                  <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                  <a href="https://in.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+               </div>
+
+            </div>
+            <a class="popup__close" href="##">X</a>
+         </div>
+      </div>
+
+      <div class="popup" id="person3">
+         <div class="popup-inner">
+            <div class="popup__photo">
+               <img src="https://placehold.co/800" alt="">
+            </div>
+            <div class="popup__text">
+               <h1>Person 3</h1>
+               <p><b>Role</b></p>
+               <br>
+               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius possimus sit ratione, consequuntur unde
+                  iusto nemo, quia ipsum officia eaque nesciunt commodi voluptatem? Officia ad dignissimos laborum
+                  blanditiis dicta doloremque tenetur corrupti, atque ipsam illo sit quibusdam, magnam quaerat, hic
+                  deserunt laudantium officiis sapiente asperiores reprehenderit sed commodi natus. Nobis illo voluptas
+                  at placeat esse. Optio doloremque dicta cupiditate repellendus enim dolorum sapiente. Iure molestias,
+                  laudantium vitae nesciunt sint voluptate, deleniti deserunt ducimus quasi, error atque enim nulla
+                  veritatis eligendi.</p>
+               <div class="popup-social">
+                  <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                  <a href="https://in.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+               </div>
+
+            </div>
+            <a class="popup__close" href="##">X</a>
+         </div>
+      </div>
+
+      <div class="popup" id="person4">
+         <div class="popup-inner">
+            <div class="popup__photo">
+               <img src="https://placehold.co/800" alt="">
+            </div>
+            <div class="popup__text">
+               <h1>Person 4</h1>
+               <p><b>Role</b></p>
+               <br>
+               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius possimus sit ratione, consequuntur unde
+                  iusto nemo, quia ipsum officia eaque nesciunt commodi voluptatem? Officia ad dignissimos laborum
+                  blanditiis dicta doloremque tenetur corrupti, atque ipsam illo sit quibusdam, magnam quaerat, hic
+                  deserunt laudantium officiis sapiente asperiores reprehenderit sed commodi natus. Nobis illo voluptas
+                  at placeat esse. Optio doloremque dicta cupiditate repellendus enim dolorum sapiente. Iure molestias,
+                  laudantium vitae nesciunt sint voluptate, deleniti deserunt ducimus quasi, error atque enim nulla
+                  veritatis eligendi.</p>
+               <div class="popup-social">
+                  <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                  <a href="https://in.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+               </div>
+
+            </div>
+            <a class="popup__close" href="##">X</a>
+         </div>
+      </div>
+
+      <div class="popup" id="person5">
+         <div class="popup-inner">
+            <div class="popup__photo">
+               <img src="https://placehold.co/800" alt="">
+            </div>
+            <div class="popup__text">
+               <h1>Person 5</h1>
+               <p><b>Role</b></p>
+               <br>
+               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius possimus sit ratione, consequuntur unde
+                  iusto nemo, quia ipsum officia eaque nesciunt commodi voluptatem? Officia ad dignissimos laborum
+                  blanditiis dicta doloremque tenetur corrupti, atque ipsam illo sit quibusdam, magnam quaerat, hic
+                  deserunt laudantium officiis sapiente asperiores reprehenderit sed commodi natus. Nobis illo voluptas
+                  at placeat esse. Optio doloremque dicta cupiditate repellendus enim dolorum sapiente. Iure molestias,
+                  laudantium vitae nesciunt sint voluptate, deleniti deserunt ducimus quasi, error atque enim nulla
+                  veritatis eligendi.</p>
+               <div class="popup-social">
+                  <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                  <a href="https://in.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+               </div>
+
+            </div>
+            <a class="popup__close" href="##">X</a>
+         </div>
+      </div>
+
+
+   </section>
+   <!--Speakers ends-->
+
+   <!-- Visitors start -->
+   <section id="visitors">
+      <h1>Register</h1>
+      <div class="wrapper elevate">
+         <header>REGISTRATION</header>
+         <form method="POST" action="/register/event_visitors" autocomplete="off">
+
+            <div class="field name-field">
+               <div class="input-field">
+                  <input type="text" name="name" placeholder="Enter Your Name" class="names" />
+
+               </div>
+               <span class="error name-error">
+                  <i class="bx bx-error-circle error-icon"></i>
+                  <p class="error-text">
+                     Please enter a valid name
+                  </p>
+               </span>
+            </div>
+            <div class="field email-field">
+               <div class="input-field">
+                  <input type="text" name="email" placeholder="Enter your email" class="emails" />
+               </div>
+               <span class="error email-error">
+                  <i class="bx bx-error-circle error-icon"></i>
+                  <p class="error-text">Please enter a valid email</p>
+               </span>
+            </div>
+            <div class="field number-field">
+               <div class="input-field">
+                  <input type="text" name="phno" placeholder="Enter your mobile number" class="numbers" />
+
+               </div>
+               <span class="error number-error">
+                  <i class="bx bx-error-circle error-icon"></i>
+                  <p class="error-text">Enter a valid mobile Number</p>
+               </span>
+            </div>
+            <div class="input-field button">
+               <input type="submit" value="Register Now" />
+            </div>
+         </form>
+      </div>
+
+   </section>
+   <!-- Visitors end -->
+
+   <!-- FAQ start -->
+   <section id="faqs" class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+      <h2>Frequently Asked Questions</h2>
+      <div class="wrapper-faq">
+         <div class="faq-row1">
+
+            <div class="faq-container">
+               <div class="question-faq">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+               </div>
+               <div class="answercont-faq">
+                  <div class="answer-faq">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur sit ut ipsum! Enim
+                     recusandae officia impedit quos obcaecati quaerat provident, porro consequuntur sit numquam,
+                     perspiciatis temporibus velit dignissimos accusantium?
+                  </div>
+               </div>
+            </div>
+
+            <div class="faq-container">
+               <div class="question-faq">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+               </div>
+               <div class="answercont-faq">
+                  <div class="answer-faq">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur sit ut ipsum! Enim
+                     recusandae officia impedit quos obcaecati quaerat provident, porro consequuntur sit numquam,
+                     perspiciatis temporibus velit dignissimos accusantium?
+                  </div>
+               </div>
+            </div>
+
+            <div class="faq-container">
+               <div class="question-faq">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+               </div>
+               <div class="answercont-faq">
+                  <div class="answer-faq">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur sit ut ipsum! Enim
+                     recusandae officia impedit quos obcaecati quaerat provident, porro consequuntur sit numquam,
+                     perspiciatis temporibus velit dignissimos accusantium?
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="faq-row2">
+
+            <div class="faq-container">
+               <div class="question-faq">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+               </div>
+               <div class="answercont-faq">
+                  <div class="answer-faq">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur sit ut ipsum! Enim
+                     recusandae officia impedit quos obcaecati quaerat provident, porro consequuntur sit numquam,
+                     perspiciatis temporibus velit dignissimos accusantium?
+                  </div>
+               </div>
+            </div>
+
+            <div class="faq-container">
+               <div class="question-faq">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+               </div>
+               <div class="answercont-faq">
+                  <div class="answer-faq">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur sit ut ipsum! Enim
+                     recusandae officia impedit quos obcaecati quaerat provident, porro consequuntur sit numquam,
+                     perspiciatis temporibus velit dignissimos accusantium?
+                  </div>
+               </div>
+            </div>
+
+            <div class="faq-container">
+               <div class="question-faq">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+               </div>
+               <div class="answercont-faq">
+                  <div class="answer-faq">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur sit ut ipsum! Enim
+                     recusandae officia impedit quos obcaecati quaerat provident, porro consequuntur sit numquam,
+                     perspiciatis temporibus velit dignissimos accusantium?
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </section>
+   <!-- FAQ end -->
+
+   <!-- Newsletter start -->
+   <section id="subscribe">
+      <div class="container">
+         <div class="sub-row1">
+            <h2>For any queries</h2>
+            <h3>feel free to contact us</h3>
+            <button type="button"><a href="#">yourmail@gmail.com</a></button>
+         </div>
+
+         <div class="sub-row2">
+            <div class="map-outer">
+               <div class="gmap-canvas">
+                  <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.541232027425!2d80.22350167483958!3d12.872880887433496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525b8c90befe2b%3A0x170ab8b5b21bb530!2sSathyabama%20Institute%20of%20Science%20and%20Technology!5e0!3m2!1sen!2sin!4v1709747620622!5m2!1sen!2sin"
+                     width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                     referrerpolicy="no-referrer-when-downgrade" id="gmap-canvas"></iframe>
+               </div>
+            </div>
+         </div>
+
+      </div>
+
+   </section>
+   <!-- Newsletter start -->
+
+   <!-- Footer start -->
+   <footer id="footer">
+      <div class="container-footer">
+         <div class="footer-row1">
+            <a href="#">
+               <img src="https://via.assets.so/img.jpg?w=1244&h=276&tc=#9C9CA0&bg=#DBDBDF" alt="">
+            </a>
+            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sapiente quo, deleniti corporis iste
+               possimus repellendus soluta a corrupti ipsa.</h5>
+         </div>
+         <div class="footer-content">
+            <div class="footer-row2">
+               <h5 class="text-white ">Get In Touch</h5>
+               <div class="content-footer">
+                  <a href="#" style="text-decoration: none;"><i class="fa fa-map-marker-alt me-3"></i>Address line
+                     1,<br> Address line 2,<br>
+                     Address line 3</a><br>
+                  <a><i class="fa fa-phone-alt me-3"></i>044 - XXXX XXXX</a><br>
+                  <a href="#" style="text-decoration: none;"><i class="fa fa-envelope me-3"></i>yourmail
+                     <br>
+                     @gmail.com</a>
+               </div>
+            </div>
+            <div class="footer-row3">
+               <h5 class="text-white">INFO</h5>
+               <a class="btn btn-link" href="#"><i class="fab fa-facebook-f"></i>&nbsp;Facebook</a><br>
+               <a class="btn btn-link" href="#"><i class="fab fa-twitter"></i> &nbsp;Twitter</a><br>
+               <a class="btn btn-link" href="#"><i class="fab fa-instagram"></i>&nbsp;Instagram</a><br>
+               <a class="btn btn-link" href="#"><i class="fab fa-youtube"></i>&nbsp;Youtube</a>
+            </div>
+         </div>
+
+   </footer>
+
+   <div style="background-color:#100F39; font-size: 18px; text-align:center;">
+      <p style="color:aliceblue;">DESIGNED BY VISHNU SIVA B</p>
+   </div>
+   <!-- Footer end -->
+
+   <!-- Javascript Files -->
+   <script>
+      // Check if the device is mobile
+      function isMobile() {
+         return window.innerWidth <= 768;
+      }
+
+      // Initialize Swiper only on mobile devices
+      if (isMobile()) {
+         const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+               el: '.swiper-pagination',
+               clickable: true,
+            },
+            loop: true
+         });
+      }
+   </script>
+
+   <!-- Background animation scripts -->
+   <script>
+      const STAR_COLOR = '#fff';
+      const STAR_SIZE = 3;
+      const STAR_MIN_SCALE = 0.2;
+      const OVERFLOW_THRESHOLD = 50;
+      const STAR_COUNT = (window.innerWidth + window.innerHeight) / 8;
+
+      const canvas = document.querySelector('canvas'),
+         context = canvas.getContext('2d');
+
+      let scale = 1, // device pixel ratio
+         width,
+         height;
+
+      let stars = [];
+
+      let pointerX,
+         pointerY;
+
+      let velocity = { x: 0, y: 0, tx: 0, ty: 0, z: 0.0005 };
+
+      let touchInput = false;
+
+      generate();
+      resize();
+      step();
+
+      window.onresize = resize;
+      canvas.onmousemove = onMouseMove;
+      canvas.ontouchmove = onTouchMove;
+      canvas.ontouchend = onMouseLeave;
+      document.onmouseleave = onMouseLeave;
+
+      function generate() {
+
+         for (let i = 0; i < STAR_COUNT; i++) {
+            stars.push({
+               x: 0,
+               y: 0,
+               z: STAR_MIN_SCALE + Math.random() * (1 - STAR_MIN_SCALE)
+            });
+         }
+
+      }
+
+      function placeStar(star) {
+
+         star.x = Math.random() * width;
+         star.y = Math.random() * height;
+
+      }
+
+      function recycleStar(star) {
+
+         let direction = 'z';
+
+         let vx = Math.abs(velocity.x),
+            vy = Math.abs(velocity.y);
+
+         if (vx > 1 || vy > 1) {
+            let axis;
+
+            if (vx > vy) {
+               axis = Math.random() < vx / (vx + vy) ? 'h' : 'v';
+            }
+            else {
+               axis = Math.random() < vy / (vx + vy) ? 'v' : 'h';
+            }
+
+            if (axis === 'h') {
+               direction = velocity.x > 0 ? 'l' : 'r';
+            }
+            else {
+               direction = velocity.y > 0 ? 't' : 'b';
+            }
+         }
+
+         star.z = STAR_MIN_SCALE + Math.random() * (1 - STAR_MIN_SCALE);
+
+         if (direction === 'z') {
+            star.z = 0.1;
+            star.x = Math.random() * width;
+            star.y = Math.random() * height;
+         }
+         else if (direction === 'l') {
+            star.x = -OVERFLOW_THRESHOLD;
+            star.y = height * Math.random();
+         }
+         else if (direction === 'r') {
+            star.x = width + OVERFLOW_THRESHOLD;
+            star.y = height * Math.random();
+         }
+         else if (direction === 't') {
+            star.x = width * Math.random();
+            star.y = -OVERFLOW_THRESHOLD;
+         }
+         else if (direction === 'b') {
+            star.x = width * Math.random();
+            star.y = height + OVERFLOW_THRESHOLD;
+         }
+
+      }
+
+      function resize() {
+
+         scale = window.devicePixelRatio || 1;
+
+         width = window.innerWidth * scale;
+         height = window.innerHeight * scale;
+
+         canvas.width = width;
+         canvas.height = height;
+
+         stars.forEach(placeStar);
+
+      }
+
+      function step() {
+
+         context.clearRect(0, 0, width, height);
+
+         update();
+         render();
+
+         requestAnimationFrame(step);
+
+      }
+
+      function update() {
+
+         velocity.tx *= 0.96;
+         velocity.ty *= 0.96;
+
+         velocity.x += (velocity.tx - velocity.x) * 0.8;
+         velocity.y += (velocity.ty - velocity.y) * 0.8;
+
+         stars.forEach((star) => {
+
+            star.x += velocity.x * star.z;
+            star.y += velocity.y * star.z;
+
+            star.x += (star.x - width / 2) * velocity.z * star.z;
+            star.y += (star.y - height / 2) * velocity.z * star.z;
+            star.z += velocity.z;
+
+            // recycle when out of bounds
+            if (star.x < -OVERFLOW_THRESHOLD || star.x > width + OVERFLOW_THRESHOLD || star.y < -OVERFLOW_THRESHOLD || star.y > height + OVERFLOW_THRESHOLD) {
+               recycleStar(star);
+            }
+
+         });
+
+      }
+
+      function render() {
+
+         stars.forEach((star) => {
+
+            context.beginPath();
+            context.lineCap = 'round';
+            context.lineWidth = STAR_SIZE * star.z * scale;
+            context.globalAlpha = 0.5 + 0.5 * Math.random();
+            context.strokeStyle = STAR_COLOR;
+
+            context.beginPath();
+            context.moveTo(star.x, star.y);
+
+            var tailX = velocity.x * 2,
+               tailY = velocity.y * 2;
+
+            // stroke() wont work on an invisible line
+            if (Math.abs(tailX) < 0.1) tailX = 0.5;
+            if (Math.abs(tailY) < 0.1) tailY = 0.5;
+
+            context.lineTo(star.x + tailX, star.y + tailY);
+
+            context.stroke();
+
+         });
+
+      }
+
+      function movePointer(x, y) {
+
+         if (typeof pointerX === 'number' && typeof pointerY === 'number') {
+
+            let ox = x - pointerX,
+               oy = y - pointerY;
+
+            velocity.tx = velocity.tx + (ox / 8 * scale) * (touchInput ? 1 : -1);
+            velocity.ty = velocity.ty + (oy / 8 * scale) * (touchInput ? 1 : -1);
+
+         }
+
+         pointerX = x;
+         pointerY = y;
+
+      }
+
+      function onMouseMove(event) {
+
+         touchInput = false;
+
+         movePointer(event.clientX, event.clientY);
+
+      }
+
+      function onTouchMove(event) {
+
+         touchInput = true;
+
+         movePointer(event.touches[0].clientX, event.touches[0].clientY, true);
+
+         event.preventDefault();
+
+      }
+
+      function onMouseLeave() {
+
+         pointerX = null;
+         pointerY = null;
+
+      }
+
+   </script>
+
+   <!-- Counter -->
+   <script src="{{url_for('static', filename='user/scripts/jquery.magnific-popup.min.js')}}"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+   <!-- Swiper JS -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+   <!-- Scripts start -->
+   <script src="https://unpkg.com/scrollreveal"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="{{url_for('static', filename='user/scripts/script.js')}}"></script>
+
+
+   <script src="{{url_for('static', filename='user/scripts/main.js')}}"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+   <!-- Scripts end -->
+</body>
+
+</html>

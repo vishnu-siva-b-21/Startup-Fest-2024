@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Round Table</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='user/images/loader.png')}}" />
+
+    <style>
+        .container {
+            margin-top: 10vh;
+        }
+
+        .container h1 {
+            margin: 5vh 0;
+        }
+
+        @media (max-width:600px) {
+            .container h1 {
+                font-size: 25px;
+            }
+        }
+
+        #downloadCSV {
+            background-color: #343A40;
+            color: #fff;
+        }
+
+        #autoreload {
+            background-color: #343A40;
+            color: #fff;
+        }
+
+        /* Centering message */
+        .center-message {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            /* Adjust height based on your preference */
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top ">
+        <a class="navbar-brand" href="#"><img src="https://via.assets.so/img.jpg?w=1244&h=276&tc=#9C9CA0&bg=#DBDBDF"
+                style="height: 50px; margin-bottom: 3px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav" style="margin-left:auto">
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Events Registrations
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{url_for('admin.round_table')}}">Round Table Registrations</a>
+                        <a class="dropdown-item" href="{{url_for('admin.tech_talks')}}">Tech Talks Registrations</a>
+                        <a class="dropdown-item" href="{{url_for('admin.mou_singing')}}">Mou Singing Registrations</a>
+                        <a class="dropdown-item" href="{{url_for('admin.bootcamps')}}">Bootcamps Registrations</a>
+                        <a class="dropdown-item" href="{{url_for('admin.startup_showcase')}}">Startup Showcase
+                            Registrations</a>
+                        <a class="dropdown-item" href="{{url_for('admin.tech_exhibits')}}">Tech Exhibits
+                            Registrations</a>
+                        <a class="dropdown-item" href="{{url_for('admin.master_class')}}">Master Class Registrations</a>
+                        <a class="dropdown-item" href="{{url_for('admin.ideathons')}}">Ideathons Registrations</a>
+                        <a class="dropdown-item" href="{{url_for('admin.investor_connect')}}">Investor connect
+                            Registrations</a>
+                        <a class="dropdown-item" href="{{url_for('admin.intern_connect')}}">Intern connect
+                            Registrations</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('admin.event_visitors')}}">Visitors Registrations</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+
+    <div class="container">
+        {% if details %}
+        <h1><span id="eventname">{{ details[0].registered_for }} Registrations</span>
+            <hr><button id="autoreload" class="btn">Pause Auto Reload</button> <button id="downloadCSV"
+                class="btn">Download as CSV</button>
+        </h1>
+        <table id="table" class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Registered For</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for detail in details %}
+                <tr>
+                    <td>{{ detail.name }}</td>
+                    <td>{{ detail.email }}</td>
+                    <td>{{ detail.phone_number }}</td>
+                    <td>{{ detail.registered_for }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <!-- Display message if no registrations -->
+        <div class="center-message">
+            No Registrations for {{ collection_name.title().replace("_"," ") }} Event <br>
+            Please Reload the page to check
+        </div>
+        {% endif %}
+    </div>
+    <div id="end" style="height:0;width:1px;"></div>
+
+
+    <script>
+        var reloadInterval; // Variable to store the interval ID for reloading
+
+        // Function to handle auto-reload
+        function autoRefresh() {
+            // Save the current scroll position
+            var scrollPosition = window.scrollY;
+
+            // Refresh the page
+            window.location.reload();
+
+            // After reloading, scroll to the "end" element
+            window.onload = function () {
+                window.location.href = '#end';
+                // Restore the previous scroll position after scrolling to the "end" element
+                window.scrollTo(0, scrollPosition);
+            };
+        }
+
+        // Function to start auto-reload
+        function startAutoRefresh() {
+            reloadInterval = setInterval(autoRefresh, 3000);
+            document.getElementById("autoreload").innerText = "Pause Auto Reload";
+            document.getElementById("downloadCSV").style.display = "none"; // Hide the download button
+        }
+
+        // Function to pause auto-reload
+        function pauseAutoRefresh() {
+            clearInterval(reloadInterval);
+            document.getElementById("autoreload").innerText = "Resume Auto Reload";
+            document.getElementById("downloadCSV").style.display = "inline-block"; // Show the download button
+        }
+
+        // Event listener for the auto-reload button
+        document.getElementById("autoreload").addEventListener("click", function () {
+            var button = document.getElementById("autoreload");
+            if (button.innerText === "Pause Auto Reload") {
+                pauseAutoRefresh();
+            } else {
+                startAutoRefresh();
+            }
+        });
+
+        // Event listener for the download CSV button
+        document.getElementById("downloadCSV").addEventListener("click", function () {
+            // Get table
+            let table = document.getElementById("table");
+            let event_name = document.getElementById("eventname").innerText;
+
+            // Generate CSV file
+            let csv = convertToCSV(table);
+
+            let file_name = `${event_name}.csv`;
+
+            // Download CSV file
+            downloadCSV(csv, file_name);
+        });
+
+        // Function to convert table data to CSV format
+        function convertToCSV(table) {
+            let csv = [];
+            let rows = table.querySelectorAll("tbody tr");
+
+            // Get column names
+            let colNames = [];
+            table.querySelectorAll("thead th").forEach(function (header) {
+                colNames.push(header.innerText);
+            });
+            csv.push(colNames.join(","));
+
+            for (let i = 0; i < rows.length; i++) {
+                let row = [],
+                    cols = rows[i].querySelectorAll("td");
+
+                for (let j = 0; j < cols.length; j++) {
+                    row.push(cols[j].innerText);
+                }
+
+                csv.push(row.join(","));
+            }
+
+            return csv.join("\n");
+        }
+
+        // Function to download CSV file
+        function downloadCSV(csv, filename) {
+            let csvFile;
+            let downloadLink;
+
+            // CSV file
+            csvFile = new Blob([csv], { type: "text/csv" });
+
+            // Download link
+            downloadLink = document.createElement("a");
+
+            // File name
+            downloadLink.download = filename;
+
+            // Create a link to the file
+            downloadLink.href = window.URL.createObjectURL(csvFile);
+
+            // Hide download link
+            downloadLink.style.display = "none";
+
+            // Add the link to DOM
+            document.body.appendChild(downloadLink);
+
+            // Click download link
+            downloadLink.click();
+        }
+
+        // Start auto-reload initially
+        startAutoRefresh();
+    </script>
+
+
+
+
+</body>
+
+</html>

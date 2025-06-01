@@ -1,0 +1,433 @@
+{% extends "user/event_base.html" %}
+
+{% block title %} Investor Connect {% endblock title %}
+
+{% block content %}
+<div class="page-container">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="cd-slider-nav">
+					<nav class="navbar navbar-expand-lg" id="tm-nav">
+						<a href="{{url_for('user.user_index')}}"><img
+								src="{{url_for('static', filename='user/images/goBack.png')}}" alt="back"></a><a
+							class="navbar-brand">Investor
+							Connect</a>
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+							data-bs-target="#navbar-supported-content" aria-controls="navbarSupportedContent"
+							aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbar-supported-content">
+							<ul class="navbar-nav mb-2 mb-lg-0">
+								<li class="nav-item selected">
+									<a class="nav-link" aria-current="page" href="#0" data-no="1">About Event</a>
+									<div class="circle"></div>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#0" data-no="2">Event
+										Speakers</a>
+									<div class="circle"></div>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#0" data-no="3">Register Here</a>
+									<div class="circle"></div>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid tm-content-container">
+		<ul class="cd-hero-slider mb-0 py-5">
+			<li class="px-3" data-page-no="1">
+				<section id="about" class="section-padding">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur
+										adipisicing elit. Inventore obcaecati
+										perspiciatis maxime consequatur
+										consectetur cum corporis, aperiam
+										laborum sapiente, amet quos quibusdam
+										eligendi ut praesentium totam saepe
+										tempore ad? Modi nulla eaque dicta.
+										Rerum aspernatur optio quibusdam, ut
+										assumenda velit inventore accusamus esse
+										doloribus dolorum illo veniam dolores
+										quaerat veritatis repudiandae nam
+										perspiciatis dignissimos vero voluptates
+										nesciunt deleniti laudantium id odio
+										architecto? Est soluta minima sunt
+										voluptas id beatae necessitatibus illo
+										ab at dolor, assumenda obcaecati, nam
+										laborum repudiandae molestias facilis
+										quae similique veniam maxime
+										praesentium! Labore excepturi nihil
+										suscipit eligendi, praesentium nemo
+										molestiae laborum officia vel illo aut
+										repudiandae! Porro molestiae ipsum
+										dolores, minus fugit, quod et temporibus
+										adipisci provident odit maxime quos
+										facilis iste voluptate Harum.
+									</p>
+								</div>
+
+								<div class="image-container">
+									<img class="item"
+										src="{{url_for('static', filename='user/images/main_event_split_img/investor_connect/image_part_001.jpg')}}"
+										style="--i: 2" alt="" />
+
+									<img class="item"
+										src="{{url_for('static', filename='user/images/main_event_split_img/investor_connect/image_part_002.jpg')}}"
+										style="--i: 6" alt="" />
+
+									<img class="item"
+										src="{{url_for('static', filename='user/images/main_event_split_img/investor_connect/image_part_003.jpg')}}"
+										style="--i: 8" alt="" />
+
+									<img class="item"
+										src="{{url_for('static', filename='user/images/main_event_split_img/investor_connect/image_part_004.jpg')}}"
+										style="--i: 4" alt="" />
+
+									<img class="item"
+										src="{{url_for('static', filename='user/images/main_event_split_img/investor_connect/image_part_005.jpg')}}"
+										style="--i: 1" alt="" />
+
+									<img class="item"
+										src="{{url_for('static', filename='user/images/main_event_split_img/investor_connect/image_part_006.jpg')}}"
+										style="--i: 9" alt="" />
+
+									<img class="item"
+										src="{{url_for('static', filename='user/images/main_event_split_img/investor_connect/image_part_007.jpg')}}"
+										style="--i: 7" alt="" />
+
+									<img class="item"
+										src="{{url_for('static', filename='user/images/main_event_split_img/investor_connect/image_part_008.jpg')}}"
+										style="--i: 5" alt="" />
+
+									<img class="item"
+										src="{{url_for('static', filename='user/images/main_event_split_img/investor_connect/image_part_009.jpg')}}"
+										style="--i: 3" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+					<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+				</section>
+			</li>
+			<li data-page-no="2">
+				<section id="speakers">
+					<h2 class="head">
+
+					</h2>
+					<div class="container-speaker">
+
+						<a href="#person1">
+							<div class="speaker-card fade-in">
+								<img src="https://placehold.co/800" alt="Speaker 1" />
+								<h3>Person 1</h3>
+								<p>Role</p>
+							</div>
+						</a>
+
+						<a href="#person2">
+							<div class="speaker-card fade-in">
+								<img src="https://placehold.co/800" alt="Speaker 2" />
+								<h3>Person 2</h3>
+								<p>Role</p>
+							</div>
+						</a>
+
+						<a href="#person3">
+							<div class="speaker-card fade-in">
+								<img src="https://placehold.co/800" alt="Speaker 3" />
+								<h3>Person 3</h3>
+								<p>Role</p>
+							</div>
+						</a>
+
+						<a href="#person4">
+							<div class="speaker-card fade-in">
+								<img src="https://placehold.co/800" alt="Speaker 4" />
+								<h3>Person 4</h3>
+								<p>Role</p>
+							</div>
+						</a>
+
+						<a href="#person5">
+							<div class="speaker-card fade-in">
+								<img src="https://placehold.co/800" alt="Speaker 5" />
+								<h3>Person 5</h3>
+								<p>Role</p>
+							</div>
+						</a>
+					</div>
+
+
+
+					<!-- Modals of speakers start -->
+					<div class="popup" id="person1">
+						<div class="popup-inner">
+							<div class="popup__photo">
+								<img src="https://placehold.co/800" alt="">
+							</div>
+							<div class="popup__text">
+								<h1>Person 1</h1>
+								<p><b>Role</b></p>
+								<br>
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing
+									elit. Eius possimus sit ratione, consequuntur
+									unde
+									iusto nemo, quia ipsum officia eaque nesciunt
+									commodi voluptatem? Officia ad dignissimos
+									laborum
+									blanditiis dicta doloremque tenetur corrupti,
+									atque ipsam illo sit quibusdam, magnam quaerat,
+									hic
+									deserunt laudantium officiis sapiente asperiores
+									reprehenderit sed commodi natus. Nobis illo
+									voluptas
+									at placeat esse. Optio doloremque dicta
+									cupiditate repellendus enim dolorum sapiente.
+									Iure molestias,
+									laudantium vitae nesciunt sint voluptate,
+									deleniti deserunt ducimus quasi, error atque
+									enim nulla
+									veritatis eligendi.</p>
+								<div class="popup-social">
+									<a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+									<a href="https://in.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+								</div>
+
+							</div>
+							<a class="popup__close" href="##">X</a>
+						</div>
+					</div>
+
+					<div class="popup" id="person2">
+						<div class="popup-inner">
+							<div class="popup__photo">
+								<img src="https://placehold.co/800" alt="">
+							</div>
+							<div class="popup__text">
+								<h1>Person 2</h1>
+								<p><b>Role</b></p>
+								<br>
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing
+									elit. Eius possimus sit ratione, consequuntur
+									unde
+									iusto nemo, quia ipsum officia eaque nesciunt
+									commodi voluptatem? Officia ad dignissimos
+									laborum
+									blanditiis dicta doloremque tenetur corrupti,
+									atque ipsam illo sit quibusdam, magnam quaerat,
+									hic
+									deserunt laudantium officiis sapiente asperiores
+									reprehenderit sed commodi natus. Nobis illo
+									voluptas
+									at placeat esse. Optio doloremque dicta
+									cupiditate repellendus enim dolorum sapiente.
+									Iure molestias,
+									laudantium vitae nesciunt sint voluptate,
+									deleniti deserunt ducimus quasi, error atque
+									enim nulla
+									veritatis eligendi.</p>
+								<div class="popup-social">
+									<a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+									<a href="https://in.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+								</div>
+
+							</div>
+							<a class="popup__close" href="##">X</a>
+						</div>
+					</div>
+
+					<div class="popup" id="person3">
+						<div class="popup-inner">
+							<div class="popup__photo">
+								<img src="https://placehold.co/800" alt="">
+							</div>
+							<div class="popup__text">
+								<h1>Person 3</h1>
+								<p><b>Role</b></p>
+								<br>
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing
+									elit. Eius possimus sit ratione, consequuntur
+									unde
+									iusto nemo, quia ipsum officia eaque nesciunt
+									commodi voluptatem? Officia ad dignissimos
+									laborum
+									blanditiis dicta doloremque tenetur corrupti,
+									atque ipsam illo sit quibusdam, magnam quaerat,
+									hic
+									deserunt laudantium officiis sapiente asperiores
+									reprehenderit sed commodi natus. Nobis illo
+									voluptas
+									at placeat esse. Optio doloremque dicta
+									cupiditate repellendus enim dolorum sapiente.
+									Iure molestias,
+									laudantium vitae nesciunt sint voluptate,
+									deleniti deserunt ducimus quasi, error atque
+									enim nulla
+									veritatis eligendi.</p>
+								<div class="popup-social">
+									<a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+									<a href="https://in.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+								</div>
+
+							</div>
+							<a class="popup__close" href="##">X</a>
+						</div>
+					</div>
+
+					<div class="popup" id="person4">
+						<div class="popup-inner">
+							<div class="popup__photo">
+								<img src="https://placehold.co/800" alt="">
+							</div>
+							<div class="popup__text">
+								<h1>Person 4</h1>
+								<p><b>Role</b></p>
+								<br>
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing
+									elit. Eius possimus sit ratione, consequuntur
+									unde
+									iusto nemo, quia ipsum officia eaque nesciunt
+									commodi voluptatem? Officia ad dignissimos
+									laborum
+									blanditiis dicta doloremque tenetur corrupti,
+									atque ipsam illo sit quibusdam, magnam quaerat,
+									hic
+									deserunt laudantium officiis sapiente asperiores
+									reprehenderit sed commodi natus. Nobis illo
+									voluptas
+									at placeat esse. Optio doloremque dicta
+									cupiditate repellendus enim dolorum sapiente.
+									Iure molestias,
+									laudantium vitae nesciunt sint voluptate,
+									deleniti deserunt ducimus quasi, error atque
+									enim nulla
+									veritatis eligendi.</p>
+								<div class="popup-social">
+									<a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+									<a href="https://in.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+								</div>
+
+							</div>
+							<a class="popup__close" href="##">X</a>
+						</div>
+					</div>
+
+					<div class="popup" id="person5">
+						<div class="popup-inner">
+							<div class="popup__photo">
+								<img src="https://placehold.co/800" alt="">
+							</div>
+							<div class="popup__text">
+								<h1>Person 5</h1>
+								<p><b>Role</b></p>
+								<br>
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing
+									elit. Eius possimus sit ratione, consequuntur
+									unde
+									iusto nemo, quia ipsum officia eaque nesciunt
+									commodi voluptatem? Officia ad dignissimos
+									laborum
+									blanditiis dicta doloremque tenetur corrupti,
+									atque ipsam illo sit quibusdam, magnam quaerat,
+									hic
+									deserunt laudantium officiis sapiente asperiores
+									reprehenderit sed commodi natus. Nobis illo
+									voluptas
+									at placeat esse. Optio doloremque dicta
+									cupiditate repellendus enim dolorum sapiente.
+									Iure molestias,
+									laudantium vitae nesciunt sint voluptate,
+									deleniti deserunt ducimus quasi, error atque
+									enim nulla
+									veritatis eligendi.</p>
+								<div class="popup-social">
+									<a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+									<a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+									<a href="https://in.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+								</div>
+
+							</div>
+							<a class="popup__close" href="##">X</a>
+						</div>
+					</div>
+
+
+				</section>
+			</li>
+			<li data-page-no="3" class="px-3">
+				<section id="visitors">
+					<div class="wrapper elevate">
+						<header>REGISTRATION</header>
+						<form method="POST" action="/register/investor_connect" autocomplete="off">
+
+							<div class="field name-field">
+								<div class="input-field">
+									<input type="text" name="name" placeholder="Enter Your Name" class="names" />
+
+								</div>
+								<span class="error name-error">
+									<i class="bx bx-error-circle error-icon"></i>
+									<p class="error-text">
+										Please enter a valid name
+									</p>
+								</span>
+							</div>
+							<div class="field email-field">
+								<div class="input-field">
+									<input type="text" name="email" placeholder="Enter your email" class="emails" />
+								</div>
+								<span class="error email-error">
+									<i class="bx bx-error-circle error-icon"></i>
+									<p class="error-text">Please enter a valid email
+									</p>
+								</span>
+							</div>
+							<div class="field number-field">
+								<div class="input-field">
+									<input type="text" name="phno" placeholder="Enter your mobile number"
+										class="numbers" />
+
+								</div>
+								<span class="error number-error">
+									<i class="bx bx-error-circle error-icon"></i>
+									<p class="error-text">Enter a valid mobile
+										Number</p>
+								</span>
+							</div>
+							<div class="input-field button">
+								<input type="submit" value="Register Now" />
+							</div>
+						</form>
+					</div>
+				</section>
+			</li>
+		</ul>
+	</div>
+	<div class="container-fluid"></div>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+
+{% endblock scripts %}
