@@ -932,7 +932,7 @@
    <!-- Newsletter start -->
 
    <!-- Footer start -->
-   <footer id="footer">
+   <footer id="footer evlevate">
       <div class="container-footer">
          <div class="footer-row1">
             <a href="#">
@@ -1021,8 +1021,8 @@
 
       window.onresize = resize;
       canvas.onmousemove = onMouseMove;
-      canvas.ontouchmove = onTouchMove;
-      canvas.ontouchend = onMouseLeave;
+      // canvas.ontouchmove = onTouchMove;
+      // canvas.ontouchend = onMouseLeave;
       document.onmouseleave = onMouseLeave;
 
       function generate() {
@@ -1181,8 +1181,8 @@
             let ox = x - pointerX,
                oy = y - pointerY;
 
-            velocity.tx = velocity.tx + (ox / 8 * scale) * (touchInput ? 1 : -1);
-            velocity.ty = velocity.ty + (oy / 8 * scale) * (touchInput ? 1 : -1);
+            velocity.tx = velocity.tx + (ox / 8 * scale);
+            velocity.ty = velocity.ty + (oy / 8 * scale);
 
          }
 
